@@ -41,11 +41,11 @@ while winner == 'No':
     if GPIO.input(21) == True:
         winner = 'Player 2'
 
-time = time.time() - timestart
-time = "%.3f" % time
+time_total = time.time() - timestart
+time_total = "%.3f" % time_total
 
 print(winner + ' wins!')
-print('Your reaction time was ' + time + ' seconds')
+print('Your reaction time was ' + time_total + ' seconds')
 
 GPIO.output(26, GPIO.LOW)
 GPIO.cleanup()
